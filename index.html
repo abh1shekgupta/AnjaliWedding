@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjali Rai & Hanish - Wedding Invitation</title>
+    <title>Anjali Rai & Hanish - Royal Wedding Invitation</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,39 +16,32 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind Custom Configuration -->
+    <!-- Tailwind Custom Peacock & Gold Palette Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        crimson: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            500: '#e11d48',
-                            700: '#be123c',
-                            800: '#9f1239',
-                            900: '#881337',
-                            950: '#4c0519',
+                        peacock: {
+                            50: '#f0f5fc',
+                            100: '#e1eef9',
+                            700: '#1d4ed8',
+                            800: '#1e3a5f',
+                            900: '#0f283e', // Deep Royal Peacock Blue
+                            950: '#081724',
                         },
-                        saffron: {
-                            100: '#fef3c7',
-                            300: '#fcd34d',
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
+                        gold: {
+                            100: '#fefce8',
+                            300: '#fef08a',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
                             700: '#b45309',
                         },
-                        magenta: {
-                            600: '#c2185b',
-                            700: '#ad1457',
-                            800: '#880e4f',
-                        },
                         ivory: {
-                            50: '#fffdfa',
-                            100: '#fff8e7',
-                            200: '#fef0d1',
-                            300: '#fde6b8',
+                            50: '#fcfbf7',
+                            100: '#f5f2eb',
+                            200: '#ebe6db',
                         }
                     },
                     fontFamily: {
@@ -64,35 +57,36 @@
 
     <style>
         body {
-            background-color: #fff8e7;
-            color: #4c0519;
+            background-color: #fcfbf7;
+            color: #0f283e;
+			color: #eab308;
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
-            background-image: radial-gradient(#fcd34d 0.75px, transparent 0.75px), radial-gradient(#fcd34d 0.75px, #fff8e7 0.75px);
+            background-image: radial-gradient(#ca8a04 0.75px, transparent 0.75px), radial-gradient(#ca8a04 0.75px, #fcfbf7 0.75px);
             background-size: 30px 30px;
             background-position: 0 0, 15px 15px;
         }
 
-        /* Metallic Crimson & Gold Gradient Text */
+        /* Royal Gold Foil & Peacock Gradient Text */
         .text-gold-gradient {
-            background: linear-gradient(135deg, #b45309 0%, #f59e0b 50%, #d97706 100%);
+            background: linear-gradient(135deg, #b45309 0%, #facc15 50%, #ca8a04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .text-crimson-gradient {
-            background: linear-gradient(135deg, #881337 0%, #be123c 50%, #c2185b 100%);
+        .text-peacock-gradient {
+            background: linear-gradient(135deg, #0f283e 0%, #1e3a5f 50%, #1d4ed8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Gold Foil Glow Effect */
-        .gold-glow {
-            box-shadow: 0 10px 35px rgba(217, 119, 6, 0.2);
+        /* Royal Glow Effects */
+        .royal-glow {
+            box-shadow: 0 10px 40px rgba(202, 138, 4, 0.25);
         }
 
-        .crimson-glow {
-            box-shadow: 0 10px 40px rgba(190, 18, 60, 0.25);
+        .peacock-glow {
+            box-shadow: 0 10px 40px rgba(15, 40, 62, 0.3);
         }
 
         /* Mandala Rotation */
@@ -115,29 +109,24 @@
         }
 
         /* Shimmer Effect for Buttons */
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-
         .btn-shimmer-gold {
-            background: linear-gradient(90deg, #f59e0b 0%, #fef3c7 50%, #f59e0b 100%);
+            background: linear-gradient(90deg, #ca8a04 0%, #fefce8 50%, #ca8a04 100%);
             background-size: 200% 100%;
             transition: all 0.3s ease;
         }
         .btn-shimmer-gold:hover {
             background-position: 100% 0;
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+            box-shadow: 0 0 25px rgba(202, 138, 4, 0.7);
         }
 
-        .btn-shimmer-crimson {
-            background: linear-gradient(90deg, #be123c 0%, #fce7f3 50%, #be123c 100%);
+        .btn-shimmer-peacock {
+            background: linear-gradient(90deg, #1e3a5f 0%, #93c5fd 50%, #1e3a5f 100%);
             background-size: 200% 100%;
             transition: all 0.3s ease;
         }
-        .btn-shimmer-crimson:hover {
+        .btn-shimmer-peacock:hover {
             background-position: 100% 0;
-            box-shadow: 0 0 20px rgba(190, 18, 60, 0.5);
+            box-shadow: 0 0 25px rgba(15, 40, 62, 0.6);
         }
 
         /* Canvas Particle Overlay */
@@ -156,15 +145,15 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #fff8e7;
+            background: #fcfbf7;
         }
         ::-webkit-scrollbar-thumb {
-            background: #be123c;
+            background: #1e3a5f;
             border-radius: 4px;
         }
     </style>
 </head>
-<body class="relative selection:bg-saffron-500 selection:text-white">
+<body class="relative selection:bg-gold-500 selection:text-white">
 
     <!-- Sparkle Canvas Overlay -->
     <canvas id="sparkleCanvas"></canvas>
@@ -174,55 +163,55 @@
         <source src="song/song.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Floating Discrete Autoplay Prompt Banner -->
-    <div id="autoplayBanner" onclick="triggerPlayFromUserInteraction()" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-gradient-to-r from-crimson-800 via-magenta-700 to-crimson-900 text-saffron-200 border-2 border-saffron-400 px-6 py-2.5 rounded-full shadow-2xl flex items-center gap-3 text-xs md:text-sm font-semibold tracking-wide cursor-pointer animate-bounce hover:scale-105 transition-all">
-        <i class="fas fa-music text-saffron-300 animate-pulse"></i>
-        <span>🎵 Tap anywhere to start playing Music</span>
-        <i class="fas fa-play-circle text-saffron-300 ml-1"></i>
+    <!-- Floating Autoplay Prompt Banner -->
+    <div id="autoplayBanner" onclick="triggerPlayFromUserInteraction()" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-gradient-to-r from-peacock-900 via-blue-950 to-peacock-900 text-gold-200 border-2 border-gold-400 px-6 py-2.5 rounded-full shadow-2xl flex items-center gap-3 text-xs md:text-sm font-semibold tracking-wide cursor-pointer animate-bounce hover:scale-105 transition-all">
+        <i class="fas fa-music text-gold-300 animate-pulse"></i>
+        <span>🎵 Tap anywhere to start playing Royal Music</span>
+        <i class="fas fa-play-circle text-gold-300 ml-1"></i>
     </div>
 
     <!-- Floating Audio Control Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <button id="audioToggle" onclick="toggleAudio()" class="flex items-center gap-3 bg-crimson-800/90 hover:bg-crimson-900 text-saffron-300 border-2 border-saffron-400 px-4 py-3 rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 crimson-glow">
+        <button id="audioToggle" onclick="toggleAudio()" class="flex items-center gap-3 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 px-4 py-3 rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 peacock-glow">
             <div id="soundWave" class="flex items-end gap-1 h-5 w-5">
-                <span class="w-1 bg-saffron-300 rounded-full h-2 animate-pulse"></span>
-                <span class="w-1 bg-saffron-300 rounded-full h-4 animate-pulse delay-100"></span>
-                <span class="w-1 bg-saffron-300 rounded-full h-3 animate-pulse delay-200"></span>
+                <span class="w-1 bg-gold-300 rounded-full h-2 animate-pulse"></span>
+                <span class="w-1 bg-gold-300 rounded-full h-4 animate-pulse delay-100"></span>
+                <span class="w-1 bg-gold-300 rounded-full h-3 animate-pulse delay-200"></span>
             </div>
-            <i id="audioIcon" class="fas fa-play text-saffron-300 text-sm hidden"></i>
+            <i id="audioIcon" class="fas fa-play text-gold-300 text-sm hidden"></i>
             <div class="flex flex-col text-left">
-                <span id="audioStatus" class="text-[10px] tracking-widest font-serif font-bold uppercase text-saffron-200">Playing Music</span>
-                <span class="text-xs font-semibold text-ivory-50">Music</span>
+                <span id="audioStatus" class="text-[10px] tracking-widest font-serif font-bold uppercase text-gold-200">Playing Music</span>
+                <span class="text-xs font-semibold text-ivory-50">Royal Melody</span>
             </div>
         </button>
     </div>
 
     <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-ivory-100/90 backdrop-blur-md border-b-2 border-saffron-400/40 py-3 px-6 shadow-sm">
+    <header class="fixed top-0 left-0 right-0 z-40 bg-ivory-100/95 backdrop-blur-md border-b-2 border-gold-400/50 py-3 px-6 shadow-sm">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="#hero" class="font-script text-3xl md:text-4xl text-crimson-800 font-bold tracking-wide">A & H</a>
-            <nav class="hidden md:flex space-x-8 text-xs tracking-widest font-serif uppercase font-bold text-crimson-900">
-                <a href="#couple" class="hover:text-saffron-600 transition-colors">The Couple</a>
-                <a href="#events" class="hover:text-saffron-600 transition-colors">Wedding Ceremony</a>
-                <a href="#gallery" class="hover:text-saffron-600 transition-colors">Photo Gallery</a>
-                <a href="#venue" class="hover:text-saffron-600 transition-colors">Venue & Map</a>
+            <a href="#hero" class="font-script text-3xl md:text-4xl text-peacock-900 font-bold tracking-wide">A & H</a>
+            <nav class="hidden md:flex space-x-8 text-xs tracking-widest font-serif uppercase font-bold text-peacock-900">
+                <a href="#couple" class="hover:text-gold-600 transition-colors">The Couple</a>
+                <a href="#events" class="hover:text-gold-600 transition-colors">Wedding Ceremony</a>
+                <a href="#gallery" class="hover:text-gold-600 transition-colors">Photo Gallery</a>
+                <a href="#venue" class="hover:text-gold-600 transition-colors">Venue & Map</a>
             </nav>
-            <a href="#venue" class="text-xs uppercase tracking-wider font-bold bg-gradient-to-r from-crimson-700 to-magenta-700 text-ivory-50 px-5 py-2 rounded-full shadow-md hover:scale-105 transition-all">Location</a>
+            <a href="#venue" class="text-xs uppercase tracking-wider font-bold bg-gradient-to-r from-peacock-800 to-blue-700 text-ivory-50 px-5 py-2 rounded-full shadow-md hover:scale-105 transition-all border border-gold-400/60">Location</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden border-b-2 border-saffron-400/30">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden border-b-2 border-gold-400/30">
         
         <!-- Rotating Background Mandalas -->
         <div class="absolute inset-0 flex items-center justify-center opacity-25 pointer-events-none">
-            <svg class="w-[700px] h-[700px] md:w-[950px] md:h-[950px] text-saffron-500 spin-slow" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="1.2">
+            <svg class="w-[700px] h-[700px] md:w-[950px] md:h-[950px] text-gold-500 spin-slow" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="1.2">
                 <circle cx="250" cy="250" r="230" stroke-dasharray="6,6" />
                 <circle cx="250" cy="250" r="195" />
                 <circle cx="250" cy="250" r="160" stroke-dasharray="4,4" />
                 <g id="petals">
-                    <path d="M250,20 Q280,120 250,220 Q220,120 250,20" fill="rgba(253, 211, 77, 0.05)" />
-                    <path d="M250,20 Q280,120 250,220 Q220,120 250,20" transform="rotate(30 250 250)" fill="rgba(253, 211, 77, 0.05)" />
+                    <path d="M250,20 Q280,120 250,220 Q220,120 250,20" fill="rgba(250, 204, 21, 0.05)" />
+                    <path d="M250,20 Q280,120 250,220 Q220,120 250,20" transform="rotate(30 250 250)" fill="rgba(250, 204, 21, 0.05)" />
                     <path d="M250,20 Q280,120 250,220 Q220,120 250,20" transform="rotate(60 250 250)" />
                     <path d="M250,20 Q280,120 250,220 Q220,120 250,20" transform="rotate(90 250 250)" />
                     <path d="M250,20 Q280,120 250,220 Q220,120 250,20" transform="rotate(120 250 250)" />
@@ -239,87 +228,87 @@
         </div>
 
         <div class="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none">
-            <svg class="w-[500px] h-[500px] text-crimson-700 spin-slow-reverse" viewBox="0 0 300 300" fill="none" stroke="currentColor" stroke-width="1">
+            <svg class="w-[500px] h-[500px] text-peacock-700 spin-slow-reverse" viewBox="0 0 300 300" fill="none" stroke="currentColor" stroke-width="1">
                 <polygon points="150,10 190,110 290,150 190,190 150,290 110,190 10,150 110,110" />
                 <polygon points="150,40 178,122 260,150 178,178 150,260 122,178 40,150 122,122" transform="rotate(22.5 150 150)" />
             </svg>
         </div>
 
-        <!-- Fixed Hero Card Content -->
-        <div class="relative z-20 max-w-4xl mx-auto text-center px-6 py-12 rounded-3xl bg-ivory-50/95 border-4 border-saffron-400 shadow-2xl crimson-glow">
+        <!-- Hero Card Content -->
+        <div class="relative z-20 max-w-4xl mx-auto text-center px-6 py-12 rounded-3xl bg-ivory-50/95 border-4 border-gold-500 shadow-2xl royal-glow">
             
             <!-- Auspicious Ganesha Emblem Header -->
             <div class="mb-4 flex justify-center">
-                <div class="w-20 h-20 rounded-full border-2 border-saffron-500 p-2 flex items-center justify-center bg-gradient-to-br from-crimson-800 to-magenta-800 text-saffron-300 shadow-lg">
-                    <svg class="w-12 h-12 text-saffron-300" viewBox="0 0 100 100" fill="currentColor">
+                <div class="w-20 h-20 rounded-full border-2 border-gold-500 p-2 flex items-center justify-center bg-gradient-to-br from-peacock-900 to-blue-900 text-gold-300 shadow-lg">
+                    <svg class="w-12 h-12 text-gold-300" viewBox="0 0 100 100" fill="currentColor">
                         <path d="M50 10 C 42 10, 35 15, 35 25 C 35 30, 38 35, 42 38 C 30 42, 20 52, 20 68 C 20 80, 32 90, 50 90 C 68 90, 80 80, 80 68 C 80 52, 70 42, 58 38 C 62 35, 65 30, 65 25 C 65 15, 58 10, 50 10 Z M 50 18 C 54 18, 58 21, 58 25 C 58 29, 54 32, 50 32 C 46 32, 42 29, 42 25 C 42 21, 46 18, 50 18 Z M 35 50 C 35 45, 42 42, 50 42 C 58 42, 65 45, 65 50 C 65 52, 63 53, 60 53 C 58 53, 56 51, 50 51 C 44 51, 42 53, 40 53 C 37 53, 35 52, 35 50 Z" />
-                        <circle cx="50" cy="25" r="3" fill="#fcd34d"/>
-                        <path d="M48 60 Q50 75 62 70" stroke="#fcd34d" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <circle cx="50" cy="25" r="3" fill="#facc15"/>
+                        <path d="M48 60 Q50 75 62 70" stroke="#facc15" stroke-width="3" fill="none" stroke-linecap="round"/>
                     </svg>
                 </div>
             </div>
 
-            <p class="text-xs md:text-sm tracking-[0.3em] font-serif uppercase font-bold text-crimson-800 mb-2">|| श्री गणेशाय नमः ||</p>
-            <p class="text-sm md:text-base font-serif italic text-crimson-900 font-medium mb-6">Together with their families, cordially invite you to celebrate the joyous wedding of</p>
+            <p class="text-xs md:text-sm tracking-[0.3em] font-serif uppercase font-bold text-peacock-900 mb-2">|| श्री गणेशाय नमः ||</p>
+            <p class="text-sm md:text-base font-serif italic text-peacock-800 font-medium mb-6">Together with their families, cordially invite you to celebrate the joyous royal wedding of</p>
 
             <!-- Couple Names -->
             <div class="my-6">
-                <h1 class="font-script text-6xl md:text-8xl text-crimson-gradient font-bold drop-shadow-md py-1">
+                <h1 class="font-script text-6xl md:text-8xl text-peacock-gradient font-bold drop-shadow-md py-1">
                     Anjali Rai
                 </h1>
                 <div class="flex items-center justify-center gap-4 my-3">
-                    <span class="h-[2px] w-16 md:w-28 bg-gradient-to-r from-transparent via-saffron-500 to-transparent"></span>
-                    <span class="font-cinzel text-2xl md:text-3xl text-saffron-600 font-bold italic">&</span>
-                    <span class="h-[2px] w-16 md:w-28 bg-gradient-to-r from-transparent via-saffron-500 to-transparent"></span>
+                    <span class="h-[2px] w-16 md:w-28 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></span>
+                    <span class="font-cinzel text-2xl md:text-3xl text-gold-600 font-bold italic">&</span>
+                    <span class="h-[2px] w-16 md:w-28 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></span>
                 </div>
-                <h1 class="font-script text-6xl md:text-8xl text-crimson-gradient font-bold drop-shadow-md py-1">
+                <h1 class="font-script text-6xl md:text-8xl text-peacock-gradient font-bold drop-shadow-md py-1">
                     Hanish
                 </h1>
             </div>
 
             <!-- Date & Location Brief -->
-            <div class="mt-8 pt-6 border-t-2 border-saffron-400/40 max-w-md mx-auto">
-                <p class="font-serif text-lg md:text-2xl text-crimson-900 font-bold tracking-wide">
-                    <i class="far fa-calendar-alt text-saffron-600 mr-2"></i> Saturday, 21st November 2026
+            <div class="mt-8 pt-6 border-t-2 border-gold-400/40 max-w-md mx-auto">
+                <p class="font-serif text-lg md:text-2xl text-peacock-900 font-bold tracking-wide">
+                    <i class="far fa-calendar-alt text-gold-600 mr-2"></i> Saturday, 21st November 2026
                 </p>
-                <p class="text-base text-crimson-800 font-semibold mt-1">
-                    <i class="fas fa-clock text-saffron-600 mr-1.5"></i> 7:00 PM Onwards
+                <p class="text-base text-peacock-800 font-semibold mt-1">
+                    <i class="fas fa-clock text-gold-600 mr-1.5"></i> 7:00 PM Onwards
                 </p>
-                <p class="text-sm md:text-base text-crimson-900 mt-2 font-serif font-medium">
-                    <i class="fas fa-map-marker-alt text-saffron-600 mr-1"></i> Eldeco Estate One, Panipat
+                <p class="text-sm md:text-base text-peacock-900 mt-2 font-serif font-medium">
+                    <i class="fas fa-map-marker-alt text-gold-600 mr-1"></i> Eldeco Estate One, Panipat
                 </p>
             </div>
 
             <!-- Countdown Timer -->
             <div class="mt-10">
-                <p class="text-xs uppercase tracking-[0.25em] font-serif font-bold text-crimson-800 mb-4">Counting Down to the Sacred Ceremony</p>
+                <p class="text-xs uppercase tracking-[0.25em] font-serif font-bold text-peacock-900 mb-4">Counting Down to the Royal Ceremony</p>
                 <div id="countdown" class="grid grid-cols-4 gap-3 max-w-lg mx-auto">
-                    <div class="bg-gradient-to-b from-crimson-800 to-crimson-900 text-ivory-50 border-2 border-saffron-400 rounded-xl p-3 shadow-md">
-                        <span id="days" class="font-serif text-2xl md:text-4xl text-saffron-300 font-bold block">00</span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-saffron-100 font-semibold">Days</span>
+                    <div class="bg-gradient-to-b from-peacock-900 to-peacock-950 text-ivory-50 border-2 border-gold-400 rounded-xl p-3 shadow-md">
+                        <span id="days" class="font-serif text-2xl md:text-4xl text-gold-300 font-bold block">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-gold-100 font-semibold">Days</span>
                     </div>
-                    <div class="bg-gradient-to-b from-crimson-800 to-crimson-900 text-ivory-50 border-2 border-saffron-400 rounded-xl p-3 shadow-md">
-                        <span id="hours" class="font-serif text-2xl md:text-4xl text-saffron-300 font-bold block">00</span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-saffron-100 font-semibold">Hours</span>
+                    <div class="bg-gradient-to-b from-peacock-900 to-peacock-950 text-ivory-50 border-2 border-gold-400 rounded-xl p-3 shadow-md">
+                        <span id="hours" class="font-serif text-2xl md:text-4xl text-gold-300 font-bold block">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-gold-100 font-semibold">Hours</span>
                     </div>
-                    <div class="bg-gradient-to-b from-crimson-800 to-crimson-900 text-ivory-50 border-2 border-saffron-400 rounded-xl p-3 shadow-md">
-                        <span id="minutes" class="font-serif text-2xl md:text-4xl text-saffron-300 font-bold block">00</span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-saffron-100 font-semibold">Mins</span>
+                    <div class="bg-gradient-to-b from-peacock-900 to-peacock-950 text-ivory-50 border-2 border-gold-400 rounded-xl p-3 shadow-md">
+                        <span id="minutes" class="font-serif text-2xl md:text-4xl text-gold-300 font-bold block">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-gold-100 font-semibold">Mins</span>
                     </div>
-                    <div class="bg-gradient-to-b from-crimson-800 to-crimson-900 text-ivory-50 border-2 border-saffron-400 rounded-xl p-3 shadow-md">
-                        <span id="seconds" class="font-serif text-2xl md:text-4xl text-saffron-300 font-bold block">00</span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-saffron-100 font-semibold">Secs</span>
+                    <div class="bg-gradient-to-b from-peacock-900 to-peacock-950 text-ivory-50 border-2 border-gold-400 rounded-xl p-3 shadow-md">
+                        <span id="seconds" class="font-serif text-2xl md:text-4xl text-gold-300 font-bold block">00</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-wider text-gold-100 font-semibold">Secs</span>
                     </div>
                 </div>
             </div>
 
             <!-- Add to Calendar Actions -->
             <div class="mt-8 flex flex-wrap justify-center gap-4">
-                <button onclick="addToGoogleCalendar()" class="btn-shimmer-crimson text-ivory-50 font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg hover:scale-105 transition-transform">
-                    <i class="fab fa-google text-saffron-300"></i> Add to Google Calendar
+                <button onclick="addToGoogleCalendar()" class="btn-shimmer-peacock text-ivory-50 font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg border border-gold-400/60 hover:scale-105 transition-transform">
+                    <i class="fab fa-google text-gold-300"></i> Add to Google Calendar
                 </button>
-                <button onclick="downloadICS()" class="border-2 border-crimson-700 text-crimson-900 hover:bg-crimson-800 hover:text-white font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider flex items-center gap-2 transition-all">
-                    <i class="fas fa-calendar-plus text-saffron-600"></i> Download .ics Invite
+                <button onclick="downloadICS()" class="border-2 border-peacock-800 text-peacock-900 hover:bg-peacock-900 hover:text-white font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider flex items-center gap-2 transition-all">
+                    <i class="fas fa-calendar-plus text-gold-600"></i> Download .ics Invite
                 </button>
             </div>
 
@@ -329,72 +318,72 @@
     <!-- Couple Section -->
     <section id="couple" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="font-cinzel text-3xl md:text-4xl text-crimson-900 font-bold">Two Hearts, One Eternal Promise</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-saffron-400 via-crimson-600 to-saffron-400 mx-auto my-3 rounded-full"></div>
-            <p class="font-serif italic text-crimson-800 text-base max-w-xl mx-auto">
-                "Blessed by family, bound by love, and embarking on a sacred lifelong journey together."
+            <h2 class="font-cinzel text-3xl md:text-4xl text-peacock-900 font-bold">Two Hearts, One Royal Promise</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
+            <p class="font-serif italic text-peacock-800 text-base max-w-xl mx-auto">
+                "Blessed by family, bound by royal love, and embarking on an eternal sacred journey together."
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <!-- Bride Profile Box -->
-            <div class="bg-ivory-50/90 border-2 border-saffron-400/80 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-crimson-600 transition-all gold-glow">
-                <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-saffron-500 p-1 overflow-hidden bg-gradient-to-br from-crimson-700 to-magenta-700 shadow-md">
+            <div class="bg-ivory-50/90 border-2 border-gold-500 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-peacock-800 transition-all royal-glow">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-gold-500 p-1 overflow-hidden bg-gradient-to-br from-peacock-900 to-blue-800 shadow-md">
                     <img src="photos/dp_female.jpeg" alt="Anjali Rai" class="w-full h-full object-cover rounded-full">
                 </div>
-                <h3 class="font-script text-5xl text-crimson-900 font-bold mb-1">Anjali Rai</h3>
-                <p class="text-xs uppercase tracking-widest text-saffron-700 font-bold font-serif mb-4">The Bride</p>
-                <p class="text-sm text-crimson-950 font-light leading-relaxed">
-                    Daughter of the Rai family. A radiant soul filled with warmth, grace, and eternal smiles.
+                <h3 class="font-script text-5xl text-peacock-900 font-bold mb-1">Anjali Rai</h3>
+                <p class="text-xs uppercase tracking-widest text-gold-700 font-bold font-serif mb-4">The Bride</p>
+                <p class="text-sm text-peacock-950 font-light leading-relaxed">
+                    Daughter of the Rai family. A radiant soul filled with warmth, grace, and royal elegance.
                 </p>
             </div>
 
             <!-- Groom Profile Box -->
-            <div class="bg-ivory-50/90 border-2 border-saffron-400/80 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-crimson-600 transition-all gold-glow">
-                <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-saffron-500 p-1 overflow-hidden bg-gradient-to-br from-crimson-700 to-magenta-700 shadow-md">
+            <div class="bg-ivory-50/90 border-2 border-gold-500 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-peacock-800 transition-all royal-glow">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-gold-500 p-1 overflow-hidden bg-gradient-to-br from-peacock-900 to-blue-800 shadow-md">
                     <img src="photos/dp_male.jpeg" alt="Hanish" class="w-full h-full object-cover rounded-full">
                 </div>
-                <h3 class="font-script text-5xl text-crimson-900 font-bold mb-1">Hanish</h3>
-                <p class="text-xs uppercase tracking-widest text-saffron-700 font-bold font-serif mb-4">The Groom</p>
-                <p class="text-sm text-crimson-950 font-light leading-relaxed">
-                    Stepping into a lifetime of togetherness with honour, joy, and deep devotion.
+                <h3 class="font-script text-5xl text-peacock-900 font-bold mb-1">Hanish</h3>
+                <p class="text-xs uppercase tracking-widest text-gold-700 font-bold font-serif mb-4">The Groom</p>
+                <p class="text-sm text-peacock-950 font-light leading-relaxed">
+                    Stepping into a lifetime of regal togetherness with honour, joy, and deep devotion.
                 </p>
             </div>
         </div>
     </section>
     
     <!-- Events Itinerary Section -->
-    <section id="events" class="py-20 px-4 bg-ivory-200/60 border-y-2 border-saffron-400/40 relative">
+    <section id="events" class="py-20 px-4 bg-ivory-200/50 border-y-2 border-gold-400/40 relative">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-crimson-800 mb-2">Sacred Matrimony</p>
-                <h2 class="font-cinzel text-3xl md:text-5xl text-crimson-900 font-bold">Wedding Ceremony</h2>
-                <div class="w-28 h-1 bg-gradient-to-r from-saffron-400 via-crimson-600 to-saffron-400 mx-auto my-3 rounded-full"></div>
+                <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Sacred Matrimony</p>
+                <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Wedding Ceremony</h2>
+                <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
             </div>
 
             <!-- Single Event Tile: Wedding -->
             <div class="flex justify-center">
-                <div class="w-full max-w-2xl bg-ivory-50 border-4 border-saffron-400 rounded-3xl p-8 text-center relative shadow-2xl crimson-glow">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-crimson-700 to-magenta-700 text-ivory-50 text-xs font-bold uppercase tracking-widest px-6 py-1.5 rounded-full shadow-md border border-saffron-300">
-                        Main Event
+                <div class="w-full max-w-2xl bg-ivory-50 border-4 border-gold-500 rounded-3xl p-8 text-center relative shadow-2xl royal-glow">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-peacock-900 to-blue-800 text-ivory-50 text-xs font-bold uppercase tracking-widest px-6 py-1.5 rounded-full shadow-md border border-gold-300">
+                        Grand Darbar Event
                     </div>
                     
-                    <div class="w-20 h-20 mx-auto mt-2 mb-4 rounded-full bg-gradient-to-br from-crimson-800 to-magenta-800 border-2 border-saffron-400 flex items-center justify-center text-saffron-300 text-3xl shadow-lg">
+                    <div class="w-20 h-20 mx-auto mt-2 mb-4 rounded-full bg-gradient-to-br from-peacock-900 to-blue-900 border-2 border-gold-400 flex items-center justify-center text-gold-300 text-3xl shadow-lg">
                         <i class="fas fa-crown"></i>
                     </div>
 
-                    <span class="text-xs font-serif uppercase tracking-widest font-bold text-saffron-700">The Grand Celebration</span>
-                    <h3 class="font-cinzel text-2xl md:text-4xl text-crimson-900 font-bold mt-2 mb-3">Wedding</h3>
-                    <div class="w-20 h-0.5 bg-saffron-500/60 mx-auto mb-4"></div>
+                    <span class="text-xs font-serif uppercase tracking-widest font-bold text-gold-700">The Royal Celebration</span>
+                    <h3 class="font-cinzel text-2xl md:text-4xl text-peacock-900 font-bold mt-2 mb-3">Wedding</h3>
+                    <div class="w-20 h-0.5 bg-gold-500/85 mx-auto mb-4"></div>
                     
-                    <p class="text-lg text-crimson-900 font-serif font-bold mb-1">
-                        <i class="far fa-calendar-alt text-saffron-600 mr-2"></i> Saturday, 21st November 2026
+                    <p class="text-lg text-peacock-900 font-serif font-bold mb-1">
+                        <i class="far fa-calendar-alt text-gold-600 mr-2"></i> Saturday, 21st November 2026
                     </p>
-                    <p class="text-base text-crimson-800 font-serif font-semibold mb-4">
-                        <i class="fas fa-clock text-saffron-600 mr-2"></i> 7:00 PM Onwards
+                    <p class="text-base text-peacock-800 font-serif font-semibold mb-4">
+                        <i class="fas fa-clock text-gold-600 mr-2"></i> 7:00 PM Onwards
                     </p>
-                    <p class="text-sm md:text-base text-crimson-950 leading-relaxed max-w-lg mx-auto">
-                        Please join us for the sacred Varmala & Pheras ceremony followed by a celebratory dinner as Anjali & Hanish unite in holy matrimony at Eldeco Estate One, Panipat.
+                    <p class="text-sm md:text-base text-peacock-950 leading-relaxed max-w-lg mx-auto">
+                        Please join us for the sacred Varmala & Pheras ceremony followed by a grand celebratory royal feast as Anjali & Hanish unite in holy matrimony at Eldeco Estate One, Panipat.
                     </p>
                 </div>
             </div>
@@ -404,11 +393,11 @@
     <!-- Photo Gallery Carousel Section -->
     <section id="gallery" class="py-20 px-4 max-w-6xl mx-auto overflow-hidden">
         <div class="text-center mb-12">
-            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-crimson-800 mb-2">Cherished Moments</p>
-            <h2 class="font-cinzel text-3xl md:text-5xl text-crimson-900 font-bold">Photo Gallery</h2>
-            <div class="w-28 h-1 bg-gradient-to-r from-saffron-400 via-crimson-600 to-saffron-400 mx-auto my-3 rounded-full"></div>
-            <p class="font-serif italic text-crimson-800 text-base max-w-xl mx-auto">
-                A glimpse into our journey of love, laughter, and togetherness.
+            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Cherished Moments</p>
+            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Photo Gallery</h2>
+            <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
+            <p class="font-serif italic text-peacock-800 text-base max-w-xl mx-auto">
+                A royal glimpse into our journey of love, laughter, and togetherness.
             </p>
         </div>
 
@@ -416,7 +405,7 @@
         <div class="relative max-w-5xl mx-auto flex items-center justify-center">
             
             <!-- Left Arrow Button -->
-            <button onclick="prevPhoto()" class="absolute left-2 sm:-left-6 z-30 bg-crimson-900/90 hover:bg-crimson-950 text-saffron-300 border-2 border-saffron-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
+            <button onclick="prevPhoto()" class="absolute left-2 sm:-left-6 z-30 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
                 <i class="fas fa-chevron-left text-lg"></i>
             </button>
 
@@ -428,7 +417,7 @@
             </div>
 
             <!-- Right Arrow Button -->
-            <button onclick="nextPhoto()" class="absolute right-2 sm:-right-6 z-30 bg-crimson-900/90 hover:bg-crimson-950 text-saffron-300 border-2 border-saffron-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
+            <button onclick="nextPhoto()" class="absolute right-2 sm:-right-6 z-30 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
                 <i class="fas fa-chevron-right text-lg"></i>
             </button>
         </div>
@@ -442,16 +431,16 @@
     <!-- Venue & Location Section -->
     <section id="venue" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="text-center mb-12">
-            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-crimson-800 mb-2">Location & Direction</p>
-            <h2 class="font-cinzel text-3xl md:text-5xl text-crimson-900 font-bold">The Venue</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-saffron-400 via-crimson-600 to-saffron-400 mx-auto my-3 rounded-full"></div>
-            <p class="text-xl text-crimson-900 font-serif font-bold mt-2">Eldeco Estate One, Panipat</p>
-            <p class="text-sm text-crimson-800">Baberpur Mandi, Panipat, Haryana 132104</p>
+            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Location & Direction</p>
+            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">The Royal Venue</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
+            <p class="text-xl text-peacock-900 font-serif font-bold mt-2">Eldeco Estate One, Panipat</p>
+            <p class="text-sm text-peacock-800">Baberpur Mandi, Panipat, Haryana 132104</p>
         </div>
 
-        <div class="bg-ivory-50 border-2 border-saffron-400 rounded-3xl p-4 md:p-6 shadow-2xl gold-glow overflow-hidden">
+        <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-4 md:p-6 shadow-2xl royal-glow overflow-hidden">
             <!-- Embedded Google Map -->
-            <div class="w-full h-96 rounded-2xl overflow-hidden border-2 border-saffron-300 shadow-inner">
+            <div class="w-full h-96 rounded-2xl overflow-hidden border-2 border-gold-400 shadow-inner">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.296293214219!2d76.97324342617878!3d29.449357196519166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dd9bcde8e12fb%3A0x28653c3db7968543!2sEldeco%20Estate%2C%20Baberpur%20Mandi%2C%20Panipat%2C%20Haryana%20132104!5e0!3m2!1sen!2sin!4v1791929785625!5m2!1sen!2sin" 
                         width="100%" 
                         height="100%" 
@@ -465,23 +454,23 @@
             <!-- Directions Button -->
             <div class="mt-6 flex flex-col md:flex-row items-center justify-between gap-4 px-2">
                 <div class="text-left">
-                    <p class="text-xs uppercase tracking-widest text-saffron-700 font-bold font-serif">Destination Address</p>
-                    <p class="text-sm text-crimson-900 font-semibold">Eldeco Estate One, Baberpur Mandi, Panipat, Haryana</p>
+                    <p class="text-xs uppercase tracking-widest text-gold-700 font-bold font-serif">Destination Address</p>
+                    <p class="text-sm text-peacock-900 font-semibold">Eldeco Estate One, Baberpur Mandi, Panipat, Haryana</p>
                 </div>
-                <a href="https://maps.app.goo.gl/6Fz4xsruR26EDFdt9" target="_blank" rel="noopener noreferrer" class="btn-shimmer-crimson text-ivory-50 font-bold px-8 py-3.5 rounded-full text-xs uppercase tracking-widest flex items-center gap-2 hover:scale-105 transition-transform w-full md:w-auto justify-center shadow-md">
-                    <i class="fas fa-directions text-base text-saffron-300"></i> Get Directions in Google Maps
+                <a href="https://maps.app.goo.gl/6Fz4xsruR26EDFdt9" target="_blank" rel="noopener noreferrer" class="btn-shimmer-peacock text-ivory-50 font-bold px-8 py-3.5 rounded-full text-xs uppercase tracking-widest flex items-center gap-2 hover:scale-105 transition-transform w-full md:w-auto justify-center shadow-md border border-gold-400/60">
+                    <i class="fas fa-directions text-base text-gold-300"></i> Get Directions in Google Maps
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 border-t-2 border-saffron-400/40 text-center bg-crimson-950 text-ivory-100 text-xs">
+    <footer class="py-10 border-t-2 border-gold-500/40 text-center bg-peacock-950 text-ivory-100 text-xs">
         <div class="max-w-4xl mx-auto px-4">
-            <h4 class="font-script text-4xl text-saffron-300 mb-2">Anjali Rai & Hanish</h4>
-            <p class="font-serif tracking-widest uppercase text-[10px] text-saffron-200 mb-4">21st November 2026 • Eldeco Estate One, Panipat</p>
-            <div class="w-20 h-0.5 bg-saffron-400/40 mx-auto mb-4"></div>
-            <p>© 2026 With Love & Blessings from the Rai & Family</p>
+            <h4 class="font-script text-4xl text-gold-300 mb-2">Anjali Rai & Hanish</h4>
+            <p class="font-serif tracking-widest uppercase text-[10px] text-gold-200 mb-4">21st November 2026 • Eldeco Estate One, Panipat</p>
+            <div class="w-20 h-0.5 bg-gold-500/40 mx-auto mb-4"></div>
+            <p>© 2026 With Royal Blessings from the Rai Family</p>
         </div>
     </footer>
 
@@ -586,7 +575,6 @@
 
             const total = galleryPhotos.length;
 
-            // Calculate indexes for Left Preview, Center Active, and Right Preview
             const prevIndex = (currentIndex - 1 + total) % total;
             const nextIndex = (currentIndex + 1) % total;
 
@@ -599,21 +587,19 @@
                 const itemDiv = document.createElement("div");
                 
                 if (isCenter) {
-                    // Center Active Photo Styles (Sharp, full focus, prominent)
-                    itemDiv.className = "relative z-20 transition-all duration-500 ease-in-out transform scale-100 opacity-100 w-[280px] sm:w-[420px] md:w-[500px] aspect-[4/3] rounded-3xl border-4 border-saffron-400 bg-ivory-50 shadow-2xl gold-glow overflow-hidden shrink-0 cursor-pointer";
+                    itemDiv.className = "relative z-20 transition-all duration-500 ease-in-out transform scale-100 opacity-100 w-[280px] sm:w-[420px] md:w-[500px] aspect-[4/3] rounded-3xl border-4 border-gold-500 bg-ivory-50 shadow-2xl royal-glow overflow-hidden shrink-0 cursor-pointer";
                     itemDiv.innerHTML = `
                         <img src="${photo.src}" alt="${photo.caption}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent flex items-end p-6">
-                            <p class="text-ivory-50 font-serif italic text-base md:text-lg font-medium drop-shadow"><i class="fas fa-heart text-saffron-300 mr-2"></i> ${photo.caption}</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-peacock-950/80 via-transparent flex items-end p-6">
+                            <p class="text-ivory-50 font-serif italic text-base md:text-lg font-medium drop-shadow"><i class="fas fa-heart text-gold-300 mr-2"></i> ${photo.caption}</p>
                         </div>
                     `;
                     itemDiv.onclick = () => { currentIndex = idx; renderGallery(); };
                 } else {
-                    // Left and Right Faded Preview Styles
-                    itemDiv.className = "relative z-10 transition-all duration-500 ease-in-out transform scale-90 opacity-40 hover:opacity-60 w-[180px] sm:w-[260px] md:w-[300px] aspect-[4/3] rounded-2xl border-2 border-saffron-300 bg-ivory-50 shadow-md overflow-hidden shrink-0 cursor-pointer hidden sm:block";
+                    itemDiv.className = "relative z-10 transition-all duration-500 ease-in-out transform scale-90 opacity-40 hover:opacity-60 w-[180px] sm:w-[260px] md:w-[300px] aspect-[4/3] rounded-2xl border-2 border-gold-400 bg-ivory-50 shadow-md overflow-hidden shrink-0 cursor-pointer hidden sm:block";
                     itemDiv.innerHTML = `
                         <img src="${photo.src}" alt="${photo.caption}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-crimson-950/30"></div>
+                        <div class="absolute inset-0 bg-peacock-950/35"></div>
                     `;
                     itemDiv.onclick = () => { currentIndex = idx; renderGallery(); };
                 }
@@ -621,10 +607,9 @@
                 track.appendChild(itemDiv);
             });
 
-            // Render Dots
             galleryPhotos.forEach((_, i) => {
                 const dot = document.createElement("button");
-                dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-8 bg-saffron-500' : 'w-2.5 bg-crimson-800/40 hover:bg-crimson-800'}`;
+                dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-8 bg-gold-500' : 'w-2.5 bg-peacock-900/30 hover:bg-peacock-900'}`;
                 dot.onclick = () => {
                     currentIndex = i;
                     renderGallery();
@@ -643,7 +628,6 @@
             renderGallery();
         }
 
-        // Initialize Gallery on Load
         window.addEventListener("DOMContentLoaded", () => {
             renderGallery();
         });
@@ -656,7 +640,7 @@
             const distance = weddingDate - now;
 
             if (distance < 0) {
-                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-crimson-900 font-cinzel text-xl font-bold'>The Wedding Celebrations Have Begun!</div>";
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-peacock-900 font-cinzel text-xl font-bold'>The Royal Wedding Celebrations Have Begun!</div>";
                 return;
             }
 
@@ -674,7 +658,7 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Canvas Golden Sparkle Floating Animation
+        // Canvas Golden Sparkle Animation
         const canvas = document.getElementById("sparkleCanvas");
         const ctx = canvas.getContext("2d");
 
@@ -705,7 +689,7 @@
             sparkles.forEach(s => {
                 ctx.beginPath();
                 ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(217, 119, 6, ${s.alpha})`;
+                ctx.fillStyle = `rgba(202, 138, 4, ${s.alpha})`;
                 ctx.fill();
 
                 s.y -= s.speedY;
@@ -726,8 +710,8 @@
         animateSparkles();
 
         function addToGoogleCalendar() {
-            const title = encodeURIComponent("Anjali Rai weds Hanish - Wedding Ceremony");
-            const details = encodeURIComponent("Join us in celebrating the wedding of Anjali Rai and Hanish at Eldeco Estate One, Panipat.");
+            const title = encodeURIComponent("Anjali Rai weds Hanish - Royal Wedding Ceremony");
+            const details = encodeURIComponent("Join us in celebrating the royal wedding of Anjali Rai and Hanish at Eldeco Estate One, Panipat.");
             const location = encodeURIComponent("Eldeco Estate One, Baberpur Mandi, Panipat, Haryana 132104");
             const startTime = "20261121T133000Z"; 
             const endTime = "20261121T203000Z";
@@ -739,10 +723,10 @@
         function downloadICS() {
             const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Wedding Invitation//Anjali and Hanish//EN
+PRODID:-//Royal Wedding Invitation//Anjali and Hanish//EN
 BEGIN:VEVENT
-SUMMARY:Anjali Rai weds Hanish - Wedding Ceremony
-DESCRIPTION:Join us for the wedding celebration of Anjali Rai & Hanish at Eldeco Estate One, Panipat.
+SUMMARY:Anjali Rai weds Hanish - Royal Wedding Ceremony
+DESCRIPTION:Join us for the royal wedding celebration of Anjali Rai & Hanish at Eldeco Estate One, Panipat.
 LOCATION:Eldeco Estate One, Baberpur Mandi, Panipat, Haryana 132104
 DTSTART:20261121T133000Z
 DTEND:20261121T203000Z
@@ -753,13 +737,12 @@ END:VCALENDAR`;
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8;' });
             const link = document.createElement('a');
             link.href = window.URL.createObjectURL(blob);
-            link.setAttribute('download', 'Anjali_Hanish_Wedding.ics');
+            link.setAttribute('download', 'Anjali_Hanish_Royal_Wedding.ics');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         }
 
-        // Initialize on page load
         window.addEventListener("DOMContentLoaded", () => {
             attemptAutoplay();
         });
