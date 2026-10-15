@@ -169,13 +169,12 @@
     <!-- Sparkle Canvas Overlay -->
     <canvas id="sparkleCanvas"></canvas>
 
-    <!-- Hidden Background Audio Player for "Music" by Goldie Sohel -->
+    <!-- Hidden Background Audio Player -->
     <audio id="bgAudio" loop preload="auto">
-        <!-- Direct audio stream for "Music" with high availability fallback audio -->
         <source src="song/song.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Floating Discrete Autoplay Prompt Banner (Shows if browser blocks unprompted autoplay) -->
+    <!-- Floating Discrete Autoplay Prompt Banner -->
     <div id="autoplayBanner" onclick="triggerPlayFromUserInteraction()" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-gradient-to-r from-crimson-800 via-magenta-700 to-crimson-900 text-saffron-200 border-2 border-saffron-400 px-6 py-2.5 rounded-full shadow-2xl flex items-center gap-3 text-xs md:text-sm font-semibold tracking-wide cursor-pointer animate-bounce hover:scale-105 transition-all">
         <i class="fas fa-music text-saffron-300 animate-pulse"></i>
         <span>🎵 Tap anywhere to start playing Music</span>
@@ -339,10 +338,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <!-- Bride Profile Box -->
-			<div class="bg-ivory-50/90 border-2 border-saffron-400/80 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-crimson-600 transition-all gold-glow">
-				<div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-saffron-500 p-1 overflow-hidden bg-gradient-to-br from-crimson-700 to-magenta-700 shadow-md">
-					<img src="photos/dp_female.jpeg" alt="Anjali Rai" class="w-full h-full object-cover rounded-full">
-				</div>
+            <div class="bg-ivory-50/90 border-2 border-saffron-400/80 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-crimson-600 transition-all gold-glow">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-saffron-500 p-1 overflow-hidden bg-gradient-to-br from-crimson-700 to-magenta-700 shadow-md">
+                    <img src="photos/dp_female.jpeg" alt="Anjali Rai" class="w-full h-full object-cover rounded-full">
+                </div>
                 <h3 class="font-script text-5xl text-crimson-900 font-bold mb-1">Anjali Rai</h3>
                 <p class="text-xs uppercase tracking-widest text-saffron-700 font-bold font-serif mb-4">The Bride</p>
                 <p class="text-sm text-crimson-950 font-light leading-relaxed">
@@ -351,10 +350,10 @@
             </div>
 
             <!-- Groom Profile Box -->
-			<div class="bg-ivory-50/90 border-2 border-saffron-400/80 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-crimson-600 transition-all gold-glow">
-				<div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-saffron-500 p-1 overflow-hidden bg-gradient-to-br from-crimson-700 to-magenta-700 shadow-md">
-					<img src="photos/dp_male.jpeg" alt="Hanish" class="w-full h-full object-cover rounded-full">
-				</div>
+            <div class="bg-ivory-50/90 border-2 border-saffron-400/80 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-crimson-600 transition-all gold-glow">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-saffron-500 p-1 overflow-hidden bg-gradient-to-br from-crimson-700 to-magenta-700 shadow-md">
+                    <img src="photos/dp_male.jpeg" alt="Hanish" class="w-full h-full object-cover rounded-full">
+                </div>
                 <h3 class="font-script text-5xl text-crimson-900 font-bold mb-1">Hanish</h3>
                 <p class="text-xs uppercase tracking-widest text-saffron-700 font-bold font-serif mb-4">The Groom</p>
                 <p class="text-sm text-crimson-950 font-light leading-relaxed">
@@ -363,8 +362,8 @@
             </div>
         </div>
     </section>
-	
-    <!-- Events Itinerary Section (Single Wedding Ceremony Tile) -->
+    
+    <!-- Events Itinerary Section -->
     <section id="events" class="py-20 px-4 bg-ivory-200/60 border-y-2 border-saffron-400/40 relative">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
@@ -402,9 +401,8 @@
         </div>
     </section>
 
-
-    <!-- Photo Gallery Section -->
-    <section id="gallery" class="py-20 px-4 max-w-6xl mx-auto">
+    <!-- Photo Gallery Carousel Section -->
+    <section id="gallery" class="py-20 px-4 max-w-6xl mx-auto overflow-hidden">
         <div class="text-center mb-12">
             <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-crimson-800 mb-2">Cherished Moments</p>
             <h2 class="font-cinzel text-3xl md:text-5xl text-crimson-900 font-bold">Photo Gallery</h2>
@@ -414,58 +412,32 @@
             </p>
         </div>
 
-        <!-- 5 Sample Photos Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Photo 1 -->
-            <div class="group relative overflow-hidden rounded-2xl border-2 border-saffron-400/80 bg-ivory-50 shadow-lg gold-glow aspect-[4/3]">
-                <img src="photos/IMG_9549.JPG.jpeg" alt="Couple portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p class="text-ivory-50 font-serif italic text-sm"><i class="fas fa-heart text-saffron-300 mr-2"></i> Our Engagement Day</p>
+        <!-- Carousel Container -->
+        <div class="relative max-w-5xl mx-auto flex items-center justify-center">
+            
+            <!-- Left Arrow Button -->
+            <button onclick="prevPhoto()" class="absolute left-2 sm:-left-6 z-30 bg-crimson-900/90 hover:bg-crimson-950 text-saffron-300 border-2 border-saffron-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
+                <i class="fas fa-chevron-left text-lg"></i>
+            </button>
+
+            <!-- Carousel Track Viewport -->
+            <div class="w-full flex items-center justify-center overflow-hidden py-6 px-2">
+                <div id="carouselTrack" class="flex items-center justify-center gap-4 md:gap-6 transition-all duration-500 ease-in-out">
+                    <!-- Dynamic Items Injected via Script -->
                 </div>
             </div>
 
-            <!-- Photo 2 -->
-            <div class="group relative overflow-hidden rounded-2xl border-2 border-saffron-400/80 bg-ivory-50 shadow-lg gold-glow aspect-[4/3]">
-                <img src="photos/IMG_9589.JPG.jpeg" alt="Wedding moments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p class="text-ivory-50 font-serif italic text-sm"><i class="fas fa-heart text-saffron-300 mr-2"></i> Magical Evenings</p>
-                </div>
-            </div>
+            <!-- Right Arrow Button -->
+            <button onclick="nextPhoto()" class="absolute right-2 sm:-right-6 z-30 bg-crimson-900/90 hover:bg-crimson-950 text-saffron-300 border-2 border-saffron-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
+                <i class="fas fa-chevron-right text-lg"></i>
+            </button>
+        </div>
 
-            <!-- Photo 3 -->
-            <div class="group relative overflow-hidden rounded-2xl border-2 border-saffron-400/80 bg-ivory-50 shadow-lg gold-glow aspect-[4/3]">
-                <img src="photos/IMG_9608.JPG.jpeg" alt="Pre-wedding celebration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p class="text-ivory-50 font-serif italic text-sm"><i class="fas fa-heart text-saffron-300 mr-2"></i> Joyful Celebrations</p>
-                </div>
-            </div>
-
-            <!-- Photo 4 -->
-            <div class="group relative overflow-hidden rounded-2xl border-2 border-saffron-400/80 bg-ivory-50 shadow-lg gold-glow aspect-[4/3]">
-                <img src="photos/IMG_9638.JPG.jpeg" alt="Traditional look" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p class="text-ivory-50 font-serif italic text-sm"><i class="fas fa-heart text-saffron-300 mr-2"></i> Traditional Elegance</p>
-                </div>
-            </div>
-
-            <!-- Photo 5 -->
-            <div class="group relative overflow-hidden rounded-2xl border-2 border-saffron-400/80 bg-ivory-50 shadow-lg gold-glow aspect-[4/3] sm:col-span-2 lg:col-span-1">
-                <img src="photos/IMG_9643.JPG.jpeg" alt="Together forever" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p class="text-ivory-50 font-serif italic text-sm"><i class="fas fa-heart text-saffron-300 mr-2"></i> Together Forever</p>
-                </div>
-            </div>
-			
-			<!-- Photo 6 -->
-            <div class="group relative overflow-hidden rounded-2xl border-2 border-saffron-400/80 bg-ivory-50 shadow-lg gold-glow aspect-[4/3]">
-                <img src="photos/IMG_9546.JPG.jpeg" alt="Traditional look" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p class="text-ivory-50 font-serif italic text-sm"><i class="fas fa-heart text-saffron-300 mr-2"></i> Traditional Elegance</p>
-                </div>
-            </div>
+        <!-- Carousel Indicators / Dots -->
+        <div id="carouselDots" class="flex justify-center items-center gap-2 mt-6">
+            <!-- Dots generated dynamically -->
         </div>
     </section>
-
 
     <!-- Venue & Location Section -->
     <section id="venue" class="py-20 px-4 max-w-5xl mx-auto">
@@ -523,7 +495,6 @@
 
         let isPlaying = false;
 
-        // Update UI states according to playing status
         function updateAudioUI(playing) {
             isPlaying = playing;
             if (playing) {
@@ -538,7 +509,6 @@
             }
         }
 
-        // Attempt instant audio playback
         function attemptAutoplay() {
             if (!audio) return;
             audio.volume = 0.85;
@@ -548,7 +518,6 @@
                 promise.then(() => {
                     updateAudioUI(true);
                 }).catch(error => {
-                    // Autoplay prevented by browser policy -> show discrete banner and wait for global interaction
                     updateAudioUI(false);
                     autoplayBanner.classList.remove("hidden");
                     attachGlobalInteractionListeners();
@@ -556,7 +525,6 @@
             }
         }
 
-        // User interaction fallback trigger
         function triggerPlayFromUserInteraction() {
             if (audio && !isPlaying) {
                 audio.play().then(() => {
@@ -597,6 +565,88 @@
                 updateAudioUI(false);
             }
         }
+
+        // --- Photo Gallery Carousel Logic ---
+        const galleryPhotos = [
+            { src: "photos/IMG_9549.JPG.jpeg", caption: "Our Engagement Day" },
+            { src: "photos/IMG_9589.JPG.jpeg", caption: "Magical Evenings" },
+            { src: "photos/IMG_9608.JPG.jpeg", caption: "Joyful Celebrations" },
+            { src: "photos/IMG_9638.JPG.jpeg", caption: "Traditional Elegance" },
+            { src: "photos/IMG_9643.JPG.jpeg", caption: "Together Forever" },
+            { src: "photos/IMG_9546.JPG.jpeg", caption: "Pre-Wedding Moments" }
+        ];
+
+        let currentIndex = 0;
+
+        function renderGallery() {
+            const track = document.getElementById("carouselTrack");
+            const dotsContainer = document.getElementById("carouselDots");
+            track.innerHTML = "";
+            dotsContainer.innerHTML = "";
+
+            const total = galleryPhotos.length;
+
+            // Calculate indexes for Left Preview, Center Active, and Right Preview
+            const prevIndex = (currentIndex - 1 + total) % total;
+            const nextIndex = (currentIndex + 1) % total;
+
+            const visibleIndices = [prevIndex, currentIndex, nextIndex];
+
+            visibleIndices.forEach((idx, position) => {
+                const photo = galleryPhotos[idx];
+                const isCenter = position === 1;
+
+                const itemDiv = document.createElement("div");
+                
+                if (isCenter) {
+                    // Center Active Photo Styles (Sharp, full focus, prominent)
+                    itemDiv.className = "relative z-20 transition-all duration-500 ease-in-out transform scale-100 opacity-100 w-[280px] sm:w-[420px] md:w-[500px] aspect-[4/3] rounded-3xl border-4 border-saffron-400 bg-ivory-50 shadow-2xl gold-glow overflow-hidden shrink-0 cursor-pointer";
+                    itemDiv.innerHTML = `
+                        <img src="${photo.src}" alt="${photo.caption}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-crimson-950/80 via-transparent flex items-end p-6">
+                            <p class="text-ivory-50 font-serif italic text-base md:text-lg font-medium drop-shadow"><i class="fas fa-heart text-saffron-300 mr-2"></i> ${photo.caption}</p>
+                        </div>
+                    `;
+                    itemDiv.onclick = () => { currentIndex = idx; renderGallery(); };
+                } else {
+                    // Left and Right Faded Preview Styles
+                    itemDiv.className = "relative z-10 transition-all duration-500 ease-in-out transform scale-90 opacity-40 hover:opacity-60 w-[180px] sm:w-[260px] md:w-[300px] aspect-[4/3] rounded-2xl border-2 border-saffron-300 bg-ivory-50 shadow-md overflow-hidden shrink-0 cursor-pointer hidden sm:block";
+                    itemDiv.innerHTML = `
+                        <img src="${photo.src}" alt="${photo.caption}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-crimson-950/30"></div>
+                    `;
+                    itemDiv.onclick = () => { currentIndex = idx; renderGallery(); };
+                }
+
+                track.appendChild(itemDiv);
+            });
+
+            // Render Dots
+            galleryPhotos.forEach((_, i) => {
+                const dot = document.createElement("button");
+                dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-8 bg-saffron-500' : 'w-2.5 bg-crimson-800/40 hover:bg-crimson-800'}`;
+                dot.onclick = () => {
+                    currentIndex = i;
+                    renderGallery();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function nextPhoto() {
+            currentIndex = (currentIndex + 1) % galleryPhotos.length;
+            renderGallery();
+        }
+
+        function prevPhoto() {
+            currentIndex = (currentIndex - 1 + galleryPhotos.length) % galleryPhotos.length;
+            renderGallery();
+        }
+
+        // Initialize Gallery on Load
+        window.addEventListener("DOMContentLoaded", () => {
+            renderGallery();
+        });
 
         // Countdown Timer Logic
         const weddingDate = new Date("November 21, 2026 19:00:00 GMT+0530").getTime();
