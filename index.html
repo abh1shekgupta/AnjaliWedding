@@ -59,7 +59,7 @@
         body {
             background-color: #fcfbf7;
             color: #0f283e;
-			color: #eab308;
+            color: #eab308;
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             background-image: radial-gradient(#ca8a04 0.75px, transparent 0.75px), radial-gradient(#ca8a04 0.75px, #fcfbf7 0.75px);
@@ -160,7 +160,7 @@
 
     <!-- Hidden Background Audio Player -->
     <audio id="bgAudio" loop preload="auto">
-        <source src="song/song2.mp3" type="audio/mpeg">
+        <source src="song/song3.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Floating Autoplay Prompt Banner -->
@@ -192,7 +192,8 @@
             <a href="#hero" class="font-script text-3xl md:text-4xl text-peacock-900 font-bold tracking-wide">A & H</a>
             <nav class="hidden md:flex space-x-8 text-xs tracking-widest font-serif uppercase font-bold text-peacock-900">
                 <a href="#couple" class="hover:text-gold-600 transition-colors">The Couple</a>
-                <a href="#events" class="hover:text-gold-600 transition-colors">Wedding Ceremony</a>
+                <a href="#events" class="hover:text-gold-600 transition-colors">Programme</a>
+                <a href="#story" class="hover:text-gold-600 transition-colors">Our Story</a>
                 <a href="#gallery" class="hover:text-gold-600 transition-colors">Photo Gallery</a>
                 <a href="#venue" class="hover:text-gold-600 transition-colors">Venue & Map</a>
             </nav>
@@ -269,10 +270,7 @@
             <!-- Date & Location Brief -->
             <div class="mt-8 pt-6 border-t-2 border-gold-400/40 max-w-md mx-auto">
                 <p class="font-serif text-lg md:text-2xl text-peacock-900 font-bold tracking-wide">
-                    <i class="far fa-calendar-alt text-gold-600 mr-2"></i> Saturday, 21st November 2026
-                </p>
-                <p class="text-base text-peacock-800 font-semibold mt-1">
-                    <i class="fas fa-clock text-gold-600 mr-1.5"></i> 7:00 PM Onwards
+                    <i class="far fa-calendar-alt text-gold-600 mr-2"></i> 19th - 21st November 2026
                 </p>
                 <p class="text-sm md:text-base text-peacock-900 mt-2 font-serif font-medium">
                     <i class="fas fa-map-marker-alt text-gold-600 mr-1"></i> Eldeco Estate One, Panipat
@@ -354,38 +352,130 @@
     
     <!-- Events Itinerary Section -->
     <section id="events" class="py-20 px-4 bg-ivory-200/50 border-y-2 border-gold-400/40 relative">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Sacred Matrimony</p>
-                <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Wedding Ceremony</h2>
+                <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Sacred Matrimony Schedule</p>
+                <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Programme</h2>
                 <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
             </div>
 
-            <!-- Single Event Tile: Wedding -->
-            <div class="flex justify-center">
-                <div class="w-full max-w-2xl bg-ivory-50 border-4 border-gold-500 rounded-3xl p-8 text-center relative shadow-2xl royal-glow">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-peacock-900 to-blue-800 text-ivory-50 text-xs font-bold uppercase tracking-widest px-6 py-1.5 rounded-full shadow-md border border-gold-300">
-                        Grand Darbar Event
-                    </div>
-                    
-                    <div class="w-20 h-20 mx-auto mt-2 mb-4 rounded-full bg-gradient-to-br from-peacock-900 to-blue-900 border-2 border-gold-400 flex items-center justify-center text-gold-300 text-3xl shadow-lg">
-                        <i class="fas fa-crown"></i>
-                    </div>
+            <!-- Event Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Day 1: Haldi Ceremony -->
+                <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-6 text-center relative shadow-xl royal-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-peacock-900 to-blue-900 border-2 border-gold-400 flex items-center justify-center text-gold-300 text-2xl shadow-md">
+                            <i class="fas fa-sun"></i>
+                        </div>
 
-                    <span class="text-xs font-serif uppercase tracking-widest font-bold text-gold-700">The Royal Celebration</span>
-                    <h3 class="font-cinzel text-2xl md:text-4xl text-peacock-900 font-bold mt-2 mb-3">Wedding</h3>
-                    <div class="w-20 h-0.5 bg-gold-500/85 mx-auto mb-4"></div>
-                    
-                    <p class="text-lg text-peacock-900 font-serif font-bold mb-1">
-                        <i class="far fa-calendar-alt text-gold-600 mr-2"></i> Saturday, 21st November 2026
-                    </p>
-                    <p class="text-base text-peacock-800 font-serif font-semibold mb-4">
-                        <i class="fas fa-clock text-gold-600 mr-2"></i> 7:00 PM Onwards
-                    </p>
-                    <p class="text-sm md:text-base text-peacock-950 leading-relaxed max-w-lg mx-auto">
-                        Please join us for the sacred Varmala & Pheras ceremony followed by a grand celebratory royal feast as Anjali & Hanish unite in holy matrimony at Eldeco Estate One, Panipat.
-                    </p>
+                        <span class="text-xs font-serif uppercase tracking-widest font-bold text-gold-700">Day 1</span>
+                        <h3 class="font-cinzel text-xl md:text-2xl text-peacock-900 font-bold mt-1 mb-2">Haldi Ceremony</h3>
+                        <div class="w-16 h-0.5 bg-gold-500/85 mx-auto mb-3"></div>
+                        
+                        <p class="text-sm text-peacock-900 font-serif font-bold mb-1">
+                            <i class="far fa-calendar-alt text-gold-600 mr-1.5"></i> Thursday, 19th Nov 2026
+                        </p>
+                        <p class="text-sm text-peacock-800 font-serif font-semibold mb-3">
+                            <i class="fas fa-clock text-gold-600 mr-1.5"></i> 10:00 A.M.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-gold-300/40 text-xs text-peacock-800 font-serif italic">
+                        The auspicious turmeric ritual filled with warmth & blessings.
+                    </div>
                 </div>
+
+                <!-- Day 2: Mehendi & Ladies Sangeet -->
+                <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-6 text-center relative shadow-xl royal-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-peacock-900 to-blue-900 border-2 border-gold-400 flex items-center justify-center text-gold-300 text-2xl shadow-md">
+                            <i class="fas fa-music"></i>
+                        </div>
+
+                        <span class="text-xs font-serif uppercase tracking-widest font-bold text-gold-700">Day 2</span>
+                        <h3 class="font-cinzel text-xl md:text-2xl text-peacock-900 font-bold mt-1 mb-2">Mehendi & Ladies Sangeet</h3>
+                        <div class="w-16 h-0.5 bg-gold-500/85 mx-auto mb-3"></div>
+                        
+                        <p class="text-sm text-peacock-900 font-serif font-bold mb-1">
+                            <i class="far fa-calendar-alt text-gold-600 mr-1.5"></i> Friday, 20th Nov 2026
+                        </p>
+                        <p class="text-sm text-peacock-800 font-serif font-semibold mb-3">
+                            <i class="fas fa-clock text-gold-600 mr-1.5"></i> 8:00 P.M.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-gold-300/40 text-xs text-peacock-800 font-serif italic">
+                        An evening of henna, music, dance, and festive joy.
+                    </div>
+                </div>
+
+                <!-- Day 3: Wedding Ceremony & Reception -->
+                <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-6 text-center relative shadow-xl royal-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-peacock-900 to-blue-900 border-2 border-gold-400 flex items-center justify-center text-gold-300 text-2xl shadow-md">
+                            <i class="fas fa-crown"></i>
+                        </div>
+
+                        <span class="text-xs font-serif uppercase tracking-widest font-bold text-gold-700">Day 3 • Main Event</span>
+                        <h3 class="font-cinzel text-xl md:text-2xl text-peacock-900 font-bold mt-1 mb-2">Wedding Day</h3>
+                        <div class="w-16 h-0.5 bg-gold-500/85 mx-auto mb-3"></div>
+                        
+                        <p class="text-sm text-peacock-900 font-serif font-bold mb-1">
+                            <i class="far fa-calendar-alt text-gold-600 mr-1.5"></i> Saturday, 21st Nov 2026
+                        </p>
+                        
+                        <ul class="text-xs text-peacock-950 text-left my-3 space-y-1.5 font-medium bg-ivory-100/80 p-3 rounded-xl border border-gold-300/50">
+                            <li class="flex justify-between items-center">
+                                <span><i class="fas fa-glass-cheers text-gold-600 mr-1"></i> Reception of Barat:</span>
+                                <span class="font-bold text-peacock-900">7:00 P.M.</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span><i class="fas fa-utensils text-gold-600 mr-1"></i> Varmala:</span>
+                                <span class="font-bold text-peacock-900">8:00 P.M.</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span><i class="fas fa-utensils text-gold-600 mr-1"></i> Dinner:</span>
+                                <span class="font-bold text-peacock-900">9:00 P.M.</span>
+                            </li>                            
+                        </ul>
+                    </div>
+                    <div class="pt-2 border-t border-gold-300/40 text-xs text-peacock-800 font-serif italic">
+                        The sacred union of two hearts blessed with timeless love and eternal vows.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Destined Pathways</p>
+            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Our Story</h2>
+            <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
+        </div>
+
+        <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-8 md:p-12 shadow-2xl royal-glow relative overflow-hidden">
+            <!-- Decorative corner flourishes or subtle elements can go here -->
+            <div class="absolute top-4 left-4 text-gold-500/20 text-4xl font-serif">“</div>
+            <div class="absolute bottom-4 right-4 text-gold-500/20 text-4xl font-serif">”</div>
+
+            <div class="space-y-6 font-serif text-peacock-950 text-base md:text-lg leading-relaxed text-center px-4">
+                <p>
+                    Some destinies are woven quietly by the stars, waiting for the right moment to unfold. Ours began with an unexpected crossing of paths that effortlessly altered the course of our lives, turning a simple introduction into an extraordinary journey.
+                </p>
+                <p>
+                    Through every shared conversation, quiet laughter, and milestone crossed together, we blossomed from acquaintances into confidants, and from confidants into soulmates. We learned that true companionship isn't just about sharing the sunshine, but about standing tall together through every season—choosing one another with absolute certainty, day after single day.
+                </p>
+                <p>
+                    Now, as we stand at the threshold of our most magnificent chapter yet, we invite you to celebrate the beginning of our forever—a lifetime built on endless grace, shared dreams, and a bond that deepens with every passing sunrise.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gold-300/50 text-center">
+                <p class="font-script text-3xl md:text-4xl text-peacock-800 font-bold">
+                    Two hearts, one royal journey, and a forever that begins here. ❤️
+                </p>
             </div>
         </div>
     </section>
@@ -434,8 +524,8 @@
             <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Location & Direction</p>
             <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">The Royal Venue</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
-            <p class="text-xl text-peacock-900 font-serif font-bold mt-2">Eldeco Estate One, Panipat</p>
-            <p class="text-sm text-peacock-800">Baberpur Mandi, Panipat, Haryana 132104</p>
+            <p class="text-xl text-peacock-900 font-serif font-bold mt-2">Eldeco Estate One</p>
+            <p class="text-sm text-peacock-800">Near Babarpur Mandi, Panipat (Haryana)</p>
         </div>
 
         <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-4 md:p-6 shadow-2xl royal-glow overflow-hidden">
@@ -455,7 +545,7 @@
             <div class="mt-6 flex flex-col md:flex-row items-center justify-between gap-4 px-2">
                 <div class="text-left">
                     <p class="text-xs uppercase tracking-widest text-gold-700 font-bold font-serif">Destination Address</p>
-                    <p class="text-sm text-peacock-900 font-semibold">Eldeco Estate One, Baberpur Mandi, Panipat, Haryana</p>
+                    <p class="text-sm text-peacock-900 font-semibold">Eldeco Estate One, Near Babarpur Mandi, Panipat, Haryana</p>
                 </div>
                 <a href="https://maps.app.goo.gl/6Fz4xsruR26EDFdt9" target="_blank" rel="noopener noreferrer" class="btn-shimmer-peacock text-ivory-50 font-bold px-8 py-3.5 rounded-full text-xs uppercase tracking-widest flex items-center gap-2 hover:scale-105 transition-transform w-full md:w-auto justify-center shadow-md border border-gold-400/60">
                     <i class="fas fa-directions text-base text-gold-300"></i> Get Directions in Google Maps
@@ -468,7 +558,7 @@
     <footer class="py-10 border-t-2 border-gold-500/40 text-center bg-peacock-950 text-ivory-100 text-xs">
         <div class="max-w-4xl mx-auto px-4">
             <h4 class="font-script text-4xl text-gold-300 mb-2">Anjali Rai & Hanish</h4>
-            <p class="font-serif tracking-widest uppercase text-[10px] text-gold-200 mb-4">21st November 2026 • Eldeco Estate One, Panipat</p>
+            <p class="font-serif tracking-widest uppercase text-[10px] text-gold-200 mb-4">19th - 21st November 2026 • Eldeco Estate One, Panipat</p>
             <div class="w-20 h-0.5 bg-gold-500/40 mx-auto mb-4"></div>
             <p>© 2026 With Royal Blessings from the Rai Family</p>
         </div>
@@ -557,20 +647,21 @@
 
         // --- Photo Gallery Carousel Logic ---
         const galleryPhotos = [
-            // { src: "photos/1.JPEG", caption: "Our Engagement Day" },
-            { src: "photos/2.jpeg", caption: "Together Forever" },
-            { src: "photos/4.jpeg", caption: "Together Forever" },
-            { src: "photos/6.jpeg", caption: "Together Forever" },
-            { src: "photos/8.jpeg", caption: "Together Forever" },
-            { src: "photos/10.jpeg", caption: "Together Forever" },
-            { src: "photos/12.jpeg", caption: "Together Forever" },
-            { src: "photos/14.jpeg", caption: "Together Forever" },
-            // { src: "photos/15.jpeg", caption: "Pre-Wedding Moments" },
-            { src: "photos/16.jpeg", caption: "Together Forever" },
-            { src: "photos/17.jpeg", caption: "Together Forever" },
-            { src: "photos/18.jpeg", caption: "Together Forever" },
-            { src: "photos/19.jpeg", caption: "Together Forever" }
-
+            { src: "photos/1.jpg", caption: "" },
+            { src: "photos/3.jpg", caption: "" },
+            { src: "photos/5.jpg", caption: "" },
+            { src: "photos/6.jpg", caption: "" },
+            { src: "photos/7.jpg", caption: "" },
+            { src: "photos/8.jpg", caption: "" },
+            { src: "photos/2.jpeg", caption: "" },
+            { src: "photos/4.jpeg", caption: "" },
+            { src: "photos/10.jpeg", caption: "" },
+            { src: "photos/12.jpeg", caption: "" },
+            { src: "photos/14.jpeg", caption: "" },
+            { src: "photos/16.jpeg", caption: "" },
+            { src: "photos/17.jpeg", caption: "" },
+            { src: "photos/18.jpeg", caption: "" },
+            { src: "photos/19.jpeg", caption: "" }
         ];
 
         let currentIndex = 0;
@@ -718,10 +809,10 @@
         animateSparkles();
 
         function addToGoogleCalendar() {
-            const title = encodeURIComponent("Anjali Rai weds Hanish - Royal Wedding Ceremony");
-            const details = encodeURIComponent("Join us in celebrating the royal wedding of Anjali Rai and Hanish at Eldeco Estate One, Panipat.");
-            const location = encodeURIComponent("Eldeco Estate One, Baberpur Mandi, Panipat, Haryana 132104");
-            const startTime = "20261121T133000Z"; 
+            const title = encodeURIComponent("Anjali Rai weds Hanish - Royal Wedding Celebrations");
+            const details = encodeURIComponent("Join us in celebrating the royal wedding of Anjali Rai and Hanish. Events run from Nov 19 to Nov 21, 2026 at Eldeco Estate One, Panipat.");
+            const location = encodeURIComponent("Eldeco Estate One, Near Babarpur Mandi, Panipat, Haryana 132104");
+            const startTime = "20261119T043000Z"; 
             const endTime = "20261121T203000Z";
 
             const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startTime}/${endTime}&details=${details}&location=${location}`;
@@ -733,10 +824,10 @@
 VERSION:2.0
 PRODID:-//Royal Wedding Invitation//Anjali and Hanish//EN
 BEGIN:VEVENT
-SUMMARY:Anjali Rai weds Hanish - Royal Wedding Ceremony
+SUMMARY:Anjali Rai weds Hanish - Royal Wedding Celebrations
 DESCRIPTION:Join us for the royal wedding celebration of Anjali Rai & Hanish at Eldeco Estate One, Panipat.
-LOCATION:Eldeco Estate One, Baberpur Mandi, Panipat, Haryana 132104
-DTSTART:20261121T133000Z
+LOCATION:Eldeco Estate One, Near Babarpur Mandi, Panipat, Haryana 132104
+DTSTART:20261119T043000Z
 DTEND:20261121T203000Z
 STATUS:CONFIRMED
 END:VEVENT
