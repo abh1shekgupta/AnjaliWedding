@@ -160,7 +160,7 @@
 
     <!-- Hidden Background Audio Player -->
     <audio id="bgAudio" loop preload="auto">
-        <source src="song/song4.mp3" type="audio/mpeg">
+        <source src="song/song3.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Floating Autoplay Prompt Banner -->
@@ -329,7 +329,7 @@
             <div class="bg-ivory-50/90 border-2 border-gold-500 rounded-2xl p-8 text-center relative overflow-hidden group hover:border-peacock-800 transition-all royal-glow flex flex-col justify-between">
                 <div>
                     <div class="w-28 h-28 mx-auto mb-4 rounded-full border-2 border-gold-500 p-1 overflow-hidden bg-gradient-to-br from-peacock-900 to-blue-800 shadow-md">
-                        <img src="photos/dp_Female.jpg" alt="Anjali Rai" class="w-full h-full object-cover rounded-full">
+                        <img src="photos/dp_female.jpeg" alt="Anjali Rai" class="w-full h-full object-cover rounded-full">
                     </div>
                     <h3 class="font-script text-5xl text-peacock-900 font-bold mb-1">Anjali Rai</h3>
                     <p class="text-xs uppercase tracking-widest text-gold-700 font-bold font-serif mb-4">The Bride</p>
@@ -363,7 +363,89 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Our Story Section -->
+    <section id="story" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Destined Pathways</p>
+            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Our Story</h2>
+            <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
+        </div>
+
+        <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-8 md:p-12 shadow-2xl royal-glow relative overflow-hidden">
+            <div class="absolute top-4 left-4 text-gold-500/20 text-4xl font-serif">“</div>
+            <div class="absolute bottom-4 right-4 text-gold-500/20 text-4xl font-serif">”</div>
+
+            <div class="space-y-6 font-serif text-peacock-950 text-base md:text-lg leading-relaxed text-center px-4">
+                <p>
+                    And then, there was us.
+                    Two people who were busy becoming who they wanted to be somehow found each other.
+                </p>
+                <p>
+                    We didn't meet with a plan to write a forever. We just started talking, became friends, became each other's people… and somewhere between the conversations, the waiting, the distance and all those little moments, we fell in love.
+                    We never asked each other to dream smaller. Instead, we stood beside each other and kept saying, “Go, I’ve got you.”
+                    Maybe that's what made us work.
+                </p>
+                <p>
+                    Two different personalities. Two different journeys. Two people deeply passionate about their own lives — and somehow, the right kind of love made space for both.
+                    And through every little coincidence, every prayer and every blessing, we kept feeling that Shiva had a little something to do with our story. 🔱
+                </p>
+                <p>
+                    Today, those two separate journeys are becoming one.
+                    On *21st November*, with Shiva's blessings, we aren't just getting married.
+                    We're choosing to build the rest of our lives together.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gold-300/50 text-center">
+                <p class="font-script text-3xl md:text-4xl text-peacock-800 font-bold">
+                    He had his dreams. She had hers. And somehow, God made them meet. ❤️
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Photo Gallery Carousel Section -->
+    <section id="gallery" class="py-20 px-4 max-w-6xl mx-auto overflow-hidden">
+        <div class="text-center mb-12">
+            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Cherished Moments</p>
+            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Photo Gallery</h2>
+            <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
+            <p class="font-serif italic text-peacock-800 text-base max-w-xl mx-auto">
+                A royal glimpse into our journey of love, laughter, and togetherness.
+            </p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative max-w-5xl mx-auto flex items-center justify-center">
+            
+            <!-- Left Arrow Button -->
+            <button onclick="prevPhoto()" class="absolute left-2 sm:-left-6 z-30 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
+                <i class="fas fa-chevron-left text-lg"></i>
+            </button>
+
+            <!-- Carousel Track Viewport -->
+            <div class="w-full flex items-center justify-center overflow-hidden py-6 px-2">
+                <div id="carouselTrack" class="flex items-center justify-center gap-4 md:gap-6 transition-all duration-500 ease-in-out">
+                    <!-- Dynamic Items Injected via Script -->
+                </div>
+            </div>
+
+            <!-- Right Arrow Button -->
+            <button onclick="nextPhoto()" class="absolute right-2 sm:-right-6 z-30 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
+                <i class="fas fa-chevron-right text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Carousel Indicators / Dots -->
+        <div id="carouselDots" class="flex justify-center items-center gap-2 mt-6">
+            <!-- Dots generated dynamically -->
+        </div>
+    </section>
+
+
+
     <!-- Events Itinerary Section -->
     <section id="events" class="py-20 px-4 bg-ivory-200/50 border-y-2 border-gold-400/40 relative">
         <div class="max-w-5xl mx-auto">
@@ -461,84 +543,6 @@
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section id="story" class="py-20 px-4 max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Destined Pathways</p>
-            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Our Story</h2>
-            <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
-        </div>
-
-        <div class="bg-ivory-50 border-2 border-gold-500 rounded-3xl p-8 md:p-12 shadow-2xl royal-glow relative overflow-hidden">
-            <div class="absolute top-4 left-4 text-gold-500/20 text-4xl font-serif">“</div>
-            <div class="absolute bottom-4 right-4 text-gold-500/20 text-4xl font-serif">”</div>
-
-            <div class="space-y-6 font-serif text-peacock-950 text-base md:text-lg leading-relaxed text-center px-4">
-                <p>
-                    And then, there was us.
-                    Two people who were busy becoming who they wanted to be somehow found each other.
-                </p>
-                <p>
-                    We didn't meet with a plan to write a forever. We just started talking, became friends, became each other's people… and somewhere between the conversations, the waiting, the distance and all those little moments, we fell in love.
-                    We never asked each other to dream smaller. Instead, we stood beside each other and kept saying, “Go, I’ve got you.”
-                    Maybe that's what made us work.
-                </p>
-                <p>
-                    Two different personalities. Two different journeys. Two people deeply passionate about their own lives — and somehow, the right kind of love made space for both.
-                    And through every little coincidence, every prayer and every blessing, we kept feeling that Shiva had a little something to do with our story. 🔱
-                </p>
-                <p>
-                    Today, those two separate journeys are becoming one.
-                    On *21st November*, with Shiva's blessings, we aren't just getting married.
-                    We're choosing to build the rest of our lives together.
-                </p>
-            </div>
-
-            <div class="mt-8 pt-6 border-t border-gold-300/50 text-center">
-                <p class="font-script text-3xl md:text-4xl text-peacock-800 font-bold">
-                    He had his dreams. She had hers. And somehow, God made them meet. ❤️
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery Carousel Section -->
-    <section id="gallery" class="py-20 px-4 max-w-6xl mx-auto overflow-hidden">
-        <div class="text-center mb-12">
-            <p class="text-xs font-serif uppercase tracking-[0.3em] font-bold text-peacock-900 mb-2">Cherished Moments</p>
-            <h2 class="font-cinzel text-3xl md:text-5xl text-peacock-900 font-bold">Photo Gallery</h2>
-            <div class="w-28 h-1 bg-gradient-to-r from-gold-400 via-peacock-600 to-gold-400 mx-auto my-3 rounded-full"></div>
-            <p class="font-serif italic text-peacock-800 text-base max-w-xl mx-auto">
-                A royal glimpse into our journey of love, laughter, and togetherness.
-            </p>
-        </div>
-
-        <!-- Carousel Container -->
-        <div class="relative max-w-5xl mx-auto flex items-center justify-center">
-            
-            <!-- Left Arrow Button -->
-            <button onclick="prevPhoto()" class="absolute left-2 sm:-left-6 z-30 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
-                <i class="fas fa-chevron-left text-lg"></i>
-            </button>
-
-            <!-- Carousel Track Viewport -->
-            <div class="w-full flex items-center justify-center overflow-hidden py-6 px-2">
-                <div id="carouselTrack" class="flex items-center justify-center gap-4 md:gap-6 transition-all duration-500 ease-in-out">
-                    <!-- Dynamic Items Injected via Script -->
-                </div>
-            </div>
-
-            <!-- Right Arrow Button -->
-            <button onclick="nextPhoto()" class="absolute right-2 sm:-right-6 z-30 bg-peacock-900/90 hover:bg-peacock-950 text-gold-300 border-2 border-gold-400 w-12 h-12 rounded-full flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110">
-                <i class="fas fa-chevron-right text-lg"></i>
-            </button>
-        </div>
-
-        <!-- Carousel Indicators / Dots -->
-        <div id="carouselDots" class="flex justify-center items-center gap-2 mt-6">
-            <!-- Dots generated dynamically -->
-        </div>
-    </section>
 
     <!-- Venue & Location Section -->
     <section id="venue" class="py-20 px-4 max-w-5xl mx-auto">
